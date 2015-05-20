@@ -14,7 +14,11 @@ class Building
   end
 
   def to_s
-    "This is #{@name} on #{address}"
+    "This is building #{@name} and it currently has #{@apartments.length} registered apartments"
+  end
+
+  def evict
+    
   end
 
 
