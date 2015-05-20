@@ -95,10 +95,28 @@ def manage_renov(building)
   end
 
   flat.tenants = [] if !flat.renovation 
-
 end
 
-
+def menu_buildings(building)
+  puts "*** Manage buildings ***"
+  print "(E)vict all tenats, (L)ist the names of all tenants, Display total rental (Inc)ome, Display (V)acant vs Occupied flats, or back (u)p in the menu or (q)uit?: "
+  choice = gets.chomp.downcase
+  case choice
+  when 'e'
+    building.evict
+  when 'l'
+    building.list_tenants
+  when 'a'
+ 
+  when 'ren'
+    
+  when 'u'
+    menu_main(building)
+  when 'q'
+    return
+  end
+  menu_buildings(building)
+end
 
 
 

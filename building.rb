@@ -18,7 +18,15 @@ class Building
   end
 
   def evict
-    
+    self.apartments.each {|appt| appt.tenants = []  } 
+    puts "All tenants evicted in #{self.name}"
+  end
+
+  def list_tenants
+    array = self.apartments.map{|a| a.tenants.map{ |i| i.name }}.flatten
+    # binding.pry
+    puts array
+    puts "No tenants" if array.empty? 
   end
 
 
