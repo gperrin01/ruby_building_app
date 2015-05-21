@@ -24,7 +24,7 @@ class Building
 
   def list_tenants
     array = self.apartments.map{|a| a.tenants.map{ |i| i.name }}.flatten
-    # binding.pry
+    # binding.pryatu
     puts array
     puts "No tenants" if array.empty? 
   end
